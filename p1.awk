@@ -7,8 +7,7 @@ tcp_count++;
 if ($1== "d" && $5=="cbr")
 udp_count++;
 }
-END
-{
+END{
 printf("Number of packet dropped in TCP %d\n", tcp_count);
 printf("Number of packet dropped in UDP %d\n", udp_count):
 }
